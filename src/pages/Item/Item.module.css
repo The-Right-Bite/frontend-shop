@@ -137,11 +137,6 @@
   color: #575757;
 }
 
-.price {
-  font-weight: 500;
-  font-size: 24px;
-}
-
 .detailedInfo {
   flex: 3;
   display: flex;

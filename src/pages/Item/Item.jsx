@@ -241,53 +241,39 @@ const addToCartItem = () => {
       )}
 
       {/* Recommendation sections removed until wired to real data */}
- <div className={styles.detailsBlock}>
-  <div className={styles.shortInfoContainer}>
-    <h3 className={styles.productName}>Similar Products</h3>
-    <button className={styles.btn_showMore}>
-      <h4>Show More</h4>
-      <span className="material-symbols-outlined">arrow_right</span>
-    </button>
-  </div>
+      <div className={styles.detailsBlock}>
+        <div className={styles.shortInfoContainer}>
+          <h3 className={styles.productName}>Similar Products</h3>
+          <button className={styles.btn_showMore}>
+            <h4>Show More</h4>
+            <span className="material-symbols-outlined">arrow_right</span>
+          </button>
+        </div>
+        <div>
+          <div >
+            <img src={imageUrl} alt={name}/>
+            <div>
+              <div className={styles.detailsBlock} >
+                <h2> {name}</h2>
+                <p> </p>
+              </div>
+              <div className={styles.btn_price}>
+                 <span className={styles.actualPrice}>{`€ ${price}`}</span>
+              </div>
+              <p>{description}</p>
+              <Link to={`/catalog/${id}`} className={styles.orderBtn}>
+              <div className={styles.nutritionRow} >
+                <h2>Order now</h2>
+                <span className="material-symbols-outlined"> arrow_right</span>
+              </div>
+              </Link>
+              
+            </div>
+            
+          </div>
+        </div>
+      </div>
 
-  {relatedProducts.length > 0 ? (
-    relatedProducts.map((item) => {
-      const imageUrl = item.images?.[0]?.url
-        ? (item.images[0].url.startsWith("/")
-            ? `${API_URL}${item.images[0].url}`
-            : item.images[0].url)
-        : "";
-
-      return (
-        <CatalogCard
-          key={item.id}
-          name={item.productName}
-          price={item.price}
-          description={item.description}
-          imageUrl={imageUrl}
-        />
-      );
-    })
-  ) : (
-    <p style={{ padding: "1rem", color: "#777" }}>No similar products</p>
-  )}
-</div>
-
-      {/*You might like also  section*/}
-       <div className={styles.detailsBlock}>
-  <div className={styles.shortInfoContainer}>
-    <h3 className={styles.productName}>You might also like</h3>
-  </div>
-
-  <CatalogCard
-    name={name}
-    price={price}
-    // ✅ тут виправляємо weight
-    kcal={protein ?? "-"} 
-    description={description}
-    imageUrl={imageUrl}
-  />
-</div>
     </div>
   );
 }

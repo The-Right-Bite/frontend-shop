@@ -24,6 +24,7 @@ export default function Catalog() {
   const [page, setPage] = useState(0);
   const [size, setSize] = useState(10);
 
+
 useEffect(() => {
   const controller = new AbortController();
 
