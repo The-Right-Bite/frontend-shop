@@ -21,14 +21,7 @@
   display: block;
   object-fit: cover;
 }
-.title {
-  font-family: var(--third-family);
-  font-weight: 300;
-  font-size: 50px;
-  text-decoration-skip-ink: none;
-  text-transform: uppercase;
-padding: 60px auto 0 20px;
-=======
+
 .title {
  font-family: var(--third-family);
  font-weight: 300;
