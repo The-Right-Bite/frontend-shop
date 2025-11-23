@@ -3,7 +3,7 @@ import styles from "./CatalogSidebar.module.css";
 import PriceRange from "../PriceRange/PriceRange";
 import PopularBrands from "@components/catalog/PopularBrands/PopularBrands";
 
-import FruitsIcon from "../../../assets/svgs/Fruits.svg";
+import FruitsAndVegetablesIcon from "../../../assets/svgs/Fruits.svg";
 import HighProteinIcon from "../../../assets/svgs/HighProtein.svg";
 import WholeGrainsIcon from "../../../assets/svgs/WholeGrains.svg";
 import DairyProductsIcon from "../../../assets/svgs/DairyProducts.svg";
@@ -67,10 +67,9 @@ const categories = [
  {
   categoryName: "Accessories",
  },
- {categoryName: "Poultry"},
 ];
 const svgsByCategories = [
- {key: "Fruits ", src: FruitsIcon},
+ {key: "Fruits & Vegetables", src: FruitsAndVegetablesIcon},
  {key: "High Protein", src: HighProteinIcon},
  {key:"Poultry", src:Poultry},
  {key:"Beverages",src:Beverages},
